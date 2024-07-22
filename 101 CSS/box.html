@@ -24,23 +24,46 @@
         }
 
         /* Padding */ /* See the Result And Learn using Inspect in Browser */
-        div#box {
+        div#box-padding {
             width: 200px;
             height: 200px;
             border: 2px dotted black;
             padding: 50px 25px  50px    25px;
-        /* Clockwise top  right bottom  left */
+            /* Clockwise top  right bottom  left */
+        }
+        
+        /* Margin */ /* See the Result And Learn using Inspect in Browser */
+        div.box-margin {
+            width: 200px;
+            height: 200px;
+            border: 2px dotted black;
+            display: block;
+            /* margin:  50px 25px  50px    25px; */
+            /* Clockwise top  right bottom  left */
+            margin:  auto; /* Auto Center */
+            
         }
     </style>
 </head>
 
 <body>
- 
+    
+    <h3>Box Shadow</h3>
     <div class="box-shadow"></div>
+
     <br>
     <br>
     <br>
-    <div id="box">This is a Box</div>    
+
+    <h3>Padding</h3>
+    <div id="box-padding">This is a Padding</div>    
+
+    <br>
+    <br>
+    <br>    
+
+    <h3>Margin</h3>
+    <div class="box-margin">This is Margin</div>
 
 
 

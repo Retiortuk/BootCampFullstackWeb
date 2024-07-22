@@ -8,7 +8,7 @@
     <style>
 
         /* Box Shadow */
-        div.box {
+        div.box-shadow {
             width: 500px;
             height: 500px;
             border: 2px solid black;
@@ -22,11 +22,27 @@
             /* box-shadow: 5px 5px 20px inset #444; */
             /*                      "inset" To make blur or shadow inside the border  */
         }
+
+        /* Padding */ /* See the Result And Learn using Inspect in Browser */
+        div#box {
+            width: 200px;
+            height: 200px;
+            border: 2px dotted black;
+            padding: 50px 25px  50px    25px;
+        /* Clockwise top  right bottom  left */
+        }
     </style>
 </head>
 
 <body>
  
-    <div class="box"></div>
+    <div class="box-shadow"></div>
+    <br>
+    <br>
+    <br>
+    <div id="box">This is a Box</div>    
+
+
+
 </body>
 </html>

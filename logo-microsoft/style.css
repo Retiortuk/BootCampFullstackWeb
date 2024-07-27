@@ -49,8 +49,9 @@ h1 {
     font-size: 75px;
 }
 
-h4 {
+h4 a{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #727272;
-
+    text-decoration: none;
+    
 }

@@ -21,18 +21,27 @@
             height: 200px;
             border: solid 5px black;
             outline: solid 5px rgb(255, 0, 0);
-            outline-offset: 20px;
+            outline-offset: 7px;
             background-color: black;
             color: white;
             text-decoration: none;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;     
         }
         
+        /* Text-Shadow */
+        .text-shadow {
+            font-size: 30px;
+            text-shadow: 2px 2px 5px green;
+            /* text-shadow: x y blur color; */
+        }
+
+        
     </style>
 </head>
 
 <body>
 
+    <h5>Box-Sizing</h5>
      <div class="box"></div>
      
      <br>
@@ -40,7 +49,16 @@
      <br>
      <br>
      
+     <h5>Outline</h5>
      <div class="outline"><a href="#">Submit</a></div>
+     
+     <br>
+     <br>
+     <br>
+     <br>
+
+     <h5>Text Shadow</h5>
+     <div class="text-shadow">Hello World</div>
 
 </body>
 </html>

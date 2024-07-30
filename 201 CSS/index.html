@@ -45,7 +45,6 @@
         }
 
         /* POSITION */
-
         /* Relative Position */
         .relative-position {
             width: 100px;
@@ -53,9 +52,20 @@
             border: solid 2px black;
             position: relative;
             top: 20px;
-            right: 20px;
+            right: 20px;  /* move the element with top left rigth bottom property */
             bottom: 20px;
             left: 20px;
+        } /* Absolute Position */
+        .absolute-position {
+            width: 50px;
+            height: 50px;
+            border: solid 2px red;
+            position: absolute;
+            top: 0;
+            /* bottom: 0; Choose this If you want to make the element in the bottom */
+            right: 0;  /* To make the element in the right */
+            /* left: 0;   To make the element in the left */
+
         }
     </style>
 </head>
@@ -86,7 +96,9 @@
     <br>
 
     <h5>relative-position</h5>
-    <div class="relative-position"></div>
+    <div class="relative-position">
+        <div class="absolute-position">text in here</div>
+    </div>
 
 
 

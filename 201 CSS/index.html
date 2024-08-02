@@ -104,6 +104,30 @@
         .child:nth-child(4) {
             background-color: black; /* TO DISABLE CERTAIN ELEMENT SPECIFIC */
         }
+
+        /* Selection Block Decoration Used When You Block Or Select Elements In Website Page It Will Change The Color And All That Shit */
+        ::selection {
+            background-color: black;
+            color: white;
+        }
+
+        /* Animation */
+        .button a {
+            display: inline-block;
+            font-size: 10px;
+            background-color: white;
+            padding: 5px 15px;
+            border: solid 1px black;
+            border-radius: 3px;
+            text-decoration: none;
+            color: black;
+            transition: background-color .2s , color 0.5s , padding 1s;
+        }
+        .button a:hover {
+            background-color: black;
+            color: white;
+            padding: 10px 30px;
+        }
     </style>
 </head>
 
@@ -172,5 +196,17 @@
 
     <h5>Before And After Pseudo Element:</h5>
     <a href="before_after.html">see here!</a>
+
+    <h5>Selection Block Decoration</h5>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nulla eveniet hic magnam reiciendis alias nam similique, nemo quasi? Provident, accusamus quisquam. Qui libero consequatur deserunt a voluptatem sit ad.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nulla eveniet hic magnam reiciendis alias nam similique, nemo quasi? Provident, accusamus quisquam. Qui libero consequatur deserunt a voluptatem sit ad.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nulla eveniet hic magnam reiciendis alias nam similique, nemo quasi? Provident, accusamus quisquam. Qui libero consequatur deserunt a voluptatem sit ad.
+    </p>
+
+    <h5>animation</h5>
+    <div class="button">
+        <a href="#">Reach Me</a>
+    </div>
 </body>
 </html>

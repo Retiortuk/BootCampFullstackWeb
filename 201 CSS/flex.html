@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Flex Moder Way For Page Layout */
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /* #container div {
+            border: solid 1px red;
+        } */
+
+        .header{
+            flex-basis: 100%;
+            flex-grow: 1;
+            flex-shrink: 0;
+            background-color: #ccc;
+            height: 45px;
+            border-bottom: solid 1px black;
+        }
+        .navigation {
+            flex-basis: 20%;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+        .content {
+            flex-basis: 80%;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="header">
+            <h2>This is Header</h2>
+        </div>
+
+        <div class="navigation">
+            <h2>Navigation</h2>
+        </div>
+
+        <div class="content">
+            <h2>Hello World</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio, sit, at tenetur velit beatae culpa itaque dolor quas inventore laborum veniam voluptates architecto unde sunt quae harum quis ipsa!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio, sit, at tenetur velit beatae culpa itaque dolor quas inventore laborum veniam voluptates architecto unde sunt quae harum quis ipsa!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio, sit, at tenetur velit beatae culpa itaque dolor quas inventore laborum veniam voluptates architecto unde sunt quae harum quis ipsa!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio, sit, at tenetur velit beatae culpa itaque dolor quas inventore laborum veniam voluptates architecto unde sunt quae harum quis ipsa!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio, sit, at tenetur velit beatae culpa itaque dolor quas inventore laborum veniam voluptates architecto unde sunt quae harum quis ipsa!</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio, sit, at tenetur velit beatae culpa itaque dolor quas inventore laborum veniam voluptates architecto unde sunt quae harum quis ipsa!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio, sit, at tenetur velit beatae culpa itaque dolor quas inventore laborum veniam voluptates architecto unde sunt quae harum quis ipsa!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio, sit, at tenetur velit beatae culpa itaque dolor quas inventore laborum veniam voluptates architecto unde sunt quae harum quis ipsa!</p>
+            <br>
+            <a href="index.html">Back To Main Page</a>
+        </div>
+    </div>
+
+</body>
+</html>

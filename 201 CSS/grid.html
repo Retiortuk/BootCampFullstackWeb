@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: content-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #grid {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px ;
+        }
+
+        .item {
+            border: solid 2px red;
+        }
+
+        .item1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            height: 60px;
+        }
+
+        .item2 {
+            grid-row-start : 2 ;
+            grid-row-end : 4 ;
+            height: 500px;
+        }
+
+        .item3 {
+            grid-column-start: 2 ;
+            grid-column-end: 4 ;
+            
+        }
+
+        .item6 {
+            grid-column-start: 1 ;
+            grid-column-end: 4 ;
+            height: 50px;
+        }
+
+        .item4 {
+            grid-column-start: 2 ;
+            grid-column-end: 4 ;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="grid">
+        <div class="item item1">1 <h1>Header</h1></div>    
+        <div class="item item2">2 <h3>Navigation</h2></div>    
+        <div class="item item3">3 <h3>Content</h3><h3>Hello World</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, id soluta inventore fugit quas cum dolor, deserunt necessitatibus aliquam officia neque aut similique maxime voluptatum harum assumenda labore. Ea, aut?</p></div>    
+        <div class="item item4">4 <h3>Content</h3><h3>Hello World</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, id soluta inventore fugit quas cum dolor, deserunt necessitatibus aliquam officia neque aut similique maxime voluptatum harum assumenda labore. Ea, aut?</p></div>        
+        <div class="item item6">6 <h3>Footer</h3></div>     
+    </div>
+</body>
+</html>

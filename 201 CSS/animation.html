@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            animation-name: moving; /* Animation Name From @Keyframes Property */
+            animation-duration: 5s; /* Duration */
+            animation-iteration-count: infinite; /* To Make it Unstopable */
+            /* animation-direction: alternate; To Animate Looping */
+
+        }
+
+        @keyframes moving {
+           from {
+                top: 0;
+                left: 0;
+            }
+
+            25% {
+                top: 0;
+                left: 89%;
+                background-color: aqua;
+            }
+
+            50% {
+                top: 89%;
+                left: 89%;
+                background-color: yellow;
+            }
+
+            75% {
+                top: 89%;
+                left: 0;
+                background-color: red;
+            }
+
+            100% {
+                top: 0;
+                left: 0;
+                background-color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle "></div>
+    <div class="back"><h2><a href="index.html">Back To Main Page</a></h2></div>    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- To make Responsive Web using | @Media | meta element Required -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body  {
+            background-color: black;
+        }
+        
+        /* For MOBILE if width less than 640px it will change BG Color to red */
+        @media (max-width : 640px) {
+            body {
+                background-color: red;
+            }
+        }
+
+        /* Mobile First  "Same Thing But reversed" */
+        /* body  {
+            background-color: red;
+        } */
+        
+        /* For DESKTOP if width More than 640px it will change BG Color to red */
+        /* @media (min-width : 640px) {
+            body {
+                background-color: black;
+            }
+        } */
+    </style>
+    
+</head>
+
+
+<body>
+    <h1>Hello World</h1>
+</body>
+</html>

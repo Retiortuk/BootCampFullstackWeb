@@ -5,7 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Layout</title>
-    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Responsive Layout Using Flex-box */
+        #layout {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #nav {
+            flex-basis: 100%;
+            border-bottom: solid 1px #aaa;
+            padding: 10px;
+        }
+        #sidebar {
+            flex-basis: 20%;
+            border: 1px solid #aaa;
+            border-bottom: none;
+            padding: 10px;
+        }
+        #content {
+            flex-basis: 80%;
+            border: solid 1px #aaa;
+            border-bottom: none;
+            padding: 10px;
+        }
+
+        /* Responsive Layout */
+        @media (max-width : 360px) {
+            /* #sidebar , */ #content {
+                flex-basis: 100%; /* Sidebar & Content will be in new block or line */
+            }
+            #sidebar {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>

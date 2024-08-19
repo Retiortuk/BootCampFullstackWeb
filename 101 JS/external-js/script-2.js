@@ -8,3 +8,4 @@ if (example == 'none') {
     console.log("I do have ", mangoes, "Mangoes")
     console.log("I my height is ", height, "cm")
 }
+

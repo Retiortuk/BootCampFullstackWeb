@@ -6,7 +6,7 @@ const student = {
     'class': '07A'
 }
 
-// How To Call it
+// How To Call it type it console
 
 student ['name'] // to see name
 student ['id'] // to see the id

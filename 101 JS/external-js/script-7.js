@@ -24,6 +24,7 @@ let car = "Nissan Skyline GT-R R34 1999"
 // typeof(variable) = to see the type of element
 
 
+// ------------------------------------------------------------------------------------------------------
 
 
 /* Change Data Type From String To Intg Vice Versa */
@@ -33,3 +34,23 @@ let car = "Nissan Skyline GT-R R34 1999"
 age = 31;
 // age = Number(age) : To Convert age to Number (int) 
 // age = String(age) : To Convert age to String  
+
+
+// ------------------------------------------------------------------------------------------------------
+
+
+/* Concatenation */
+
+const name = "Gesa";
+college = "Telkom University" ;
+umur = 19 ;
+
+// OLD SCHOOL WAY
+console.log('My name is ' + name +' Im From ' + college +' and my age is ' + umur) 
+
+// Modern Way Using Semi Baptic but not avail on My keyboard
+// console.log('My name is ${name} Im From ${college} and my age is ${umur}')
+
+
+// ------------------------------------------------------------------------------------------------------
+

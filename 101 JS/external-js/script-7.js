@@ -54,3 +54,25 @@ console.log('My name is ' + name +' Im From ' + college +' and my age is ' + umu
 
 // ------------------------------------------------------------------------------------------------------
 
+// Array 
+
+const lst = ["Gesa", 19, "Seberapa", 120, "Lah", {}, []]
+
+// To Push Items to The Data Array Using:
+lst.push("new item here")
+
+// To Delete items usin pop: (Only Delete The Latest Data Array)
+// const newitms = lst.pop()
+
+// Array Iteration
+const arr = ['Zero', 'One', 'two', 'three', 'four', 'five']
+
+//Old School Way
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(i , arr[i])
+// }
+
+//Modern Way
+arr.forEach(no => {
+    console.log(no)
+})

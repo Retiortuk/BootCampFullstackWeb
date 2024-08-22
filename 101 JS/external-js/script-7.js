@@ -1,6 +1,5 @@
 /* String Methods */
 
-
 // .search() = For Searching / Start from zero, space includes counted /
 // .length = To know the length Start from zero, space includes counted
 // .slice() =  it will delete the data or slice it
@@ -23,6 +22,9 @@ let car = "Nissan Skyline GT-R R34 1999"
 // car.trim() // To Delete Unwanted Spaces
 // data = car.split(" ") // To make each sentence to be an array or object data
 // typeof(variable) = to see the type of element
+
+
+
 
 /* Change Data Type From String To Intg Vice Versa */
 

@@ -23,3 +23,11 @@ let car = "Nissan Skyline GT-R R34 1999"
 // car.trim() // To Delete Unwanted Spaces
 // data = car.split(" ") // To make each sentence to be an array or object data
 // typeof(variable) = to see the type of element
+
+/* Change Data Type From String To Intg Vice Versa */
+
+// typeof(variable) = important To use
+
+age = 31;
+// age = Number(age) : To Convert age to Number (int) 
+// age = String(age) : To Convert age to String  

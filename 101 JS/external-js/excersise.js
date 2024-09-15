@@ -20,3 +20,5 @@ if (operator === "+") {
 
 alert("The result is: " + result);
 
+alert("Hello World");
+

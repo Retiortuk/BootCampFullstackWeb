@@ -22,3 +22,4 @@ alert("The result is: " + result);
 
 alert("Hello World");
 
+alert("test");

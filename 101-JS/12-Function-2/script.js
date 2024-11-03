@@ -10,5 +10,5 @@ function addNumbers(hi, ...numbers){
     return `Hi ${hi} Total Is: ${total}`
 }
 
-const result = addNumbers("Gesa", 1,2);
+const result = addNumbers("Gesa", 1,2,120,5);
 console.log(result)

@@ -46,10 +46,12 @@ college = "Telkom University" ;
 umur = 19 ;
 
 // OLD SCHOOL WAY
-console.log('My name is ' + name +' Im From ' + college +' and my age is ' + umur) 
+// console.log('My name is ' + name +' Im From ' + college +' and my age is ' + umur) 
 
-// Modern Way Using Semi Baptic but not avail on My keyboard
+// Modern Way Using Semi Baptic but not avail on My keyboard's pc
 // console.log('My name is ${name} Im From ${college} and my age is ${umur}')
+// UPDATED AVAIL ON MY LAPTOP
+console.log(`My Name is ${name} Im From ${college} and my age is ${age}`)
 
 
 // ------------------------------------------------------------------------------------------------------

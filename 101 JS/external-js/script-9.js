@@ -9,16 +9,22 @@
 
 
 /* NUMERAL */
-function timesNumbers(no1, no2) {
+function timesNumbers(no1, no2){
     const total = Number(no1) * Number(no2);
     return total;
 }
-const timesNumbersTotal = timesNumbers('100', '40');
+const totalKali = timesNumbers('10', '5');
 
 /* WORD */
 function greeting(name) {
     const hi = 'Hello ' + name
     return hi;
 }
-const hello = greeting('Gesa')
+const welcome = greeting('Gesa');
+
+function Bye(user){
+    const adios = "Bye See You Later " + user;
+    return adios;
+}
+const exit = Bye('Johnny');
 

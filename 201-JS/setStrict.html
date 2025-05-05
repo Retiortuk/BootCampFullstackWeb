@@ -8,12 +8,25 @@
 <body>
     <script>
         // Example of setting strict mode 
-        "use strict";
-        // This will throw an error because 'x' is not defined
-        let x = "Hello World!";
-        console.log(x); // This will excecute successfully
-        console.log(y); // This will error not execute because 'y' is not defined if strict mode is enabled
-        // without strict mode, the above line would not throw an error and would create a global variable 'y'
+        // "use strict";
+        // // This will throw an error because 'x' is not defined
+        // let x = "Hello World!";
+        // console.log(x); // This will excecute successfully
+        // console.log(y); // This will error not execute because 'y' is not defined if strict mode is enabled
+        // // without strict mode, the above line would not throw an error and would create a global variable 'y'
+
+        // Example Of interval function
+        // Interval uses for repeated execution of a function at specified intervals
+        let count = 0;
+        const intervalId = setInterval(function() {
+            console.log("Loading");
+            count++;
+
+            if (count === 5) {
+                console.log("Done Loading");
+                clearInterval(intervalId); // Stop the interval after 5 iterations
+            }
+        }, 2000); // 2 seconds interval
     </script>
 </body>
 </html>

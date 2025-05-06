@@ -176,28 +176,44 @@
         // console.log(greet()); // This will call the greet function and print 'Hello World!'
 
         // Example of Class in javascript
-        class Animal {
-            setName(name) {
-                this.name = name; //   This will set the name of the animal
-            }
-            setSound(sound) {
-                this.sound = sound;// This will set the sound of the animal
-            }
-            speak() {
-                if (this.name === undefined) {
-                    this.name = "The dog"; // This will set the name to 'The dog' if it's undefined 1st Method
-                    // console.log("the dog has no name and he's woof woof") // This will print 'the dog has no name and he's woof woof'
-                }
-                if (this.sound === undefined) {
-                    this.sound = "Doesn't talk"; // This will set the sound to 'Doesn't talk' if it's undefined 
-                }
-                console.log(`The dog's named is ${this.name} and he's ${this.sound}`); // This will print 'The dog's name is <name>'
-            }
-        }
-        const dog = new Animal();
-        dog.setName(); // This will set the name of the dog to 'Arthur'
-        dog.setSound(); // This will set the speak of the dog to 'woof woof'
-        dog.speak(); // This will call the speak method of the dog object and print 'The dog's name is Arthur and he's woof woof'
+        // class Animal {
+        //     setName(name) {
+        //         this.name = name; //   This will set the name of the animal
+        //     }
+        //     setSound(sound) {
+        //         this.sound = sound;// This will set the sound of the animal
+        //     }
+        //     speak() {
+        //         if (this.name === undefined) {
+        //             this.name = "The dog"; // This will set the name to 'The dog' if it's undefined 1st Method
+        //             // console.log("the dog has no name and he's woof woof") // This will print 'the dog has no name and he's woof woof'
+        //         }
+        //         if (this.sound === undefined) {
+        //             this.sound = "Doesn't talk"; // This will set the sound to 'Doesn't talk' if it's undefined 
+        //         }
+        //         console.log(`The dog's named is ${this.name} and he's ${this.sound}`); // This will print 'The dog's name is <name>'
+        //     }
+        // }
+        // const dog = new Animal();
+        // dog.setName(); // This will set the name of the dog to 'Arthur'
+        // dog.setSound(); // This will set the speak of the dog to 'woof woof'
+        // dog.speak(); // This will call the speak method of the dog object and print 'The dog's name is Arthur and he's woof woof'
+
+        // Example of class with constructor
+        // class Student {
+        //     constructor(name, studentsId) {
+        //         this.name = name; // This will set the name of the student
+        //         this.studentsId = studentsId; // This will set id of the student
+        //     }
+
+        //     showStudents() {
+        //         console.log(`The Student's name: ${this.name} and his id is ${this.studentsId}`); // This will print 'The Student's name is <name> and his id is <id>'
+        //     }
+
+        // }
+        // // output
+        // const student1 = new Student("Gesa", 2311104028); // This will create a new student object with the name 'Arthur' and id '2311104028'
+        // student1.showStudents(); // This will call the showStudents method of the student1 object and print 'The Student's name is Arthur and his id is 2311104028'
 
     </script>
 </body>

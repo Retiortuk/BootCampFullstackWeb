@@ -174,7 +174,30 @@
         //     console.log("Hello World!"); // This will print 'Hello World!'
         // }
         // console.log(greet()); // This will call the greet function and print 'Hello World!'
-        
+
+        // Example of Class in javascript
+        class Animal {
+            setName(name) {
+                this.name = name; //   This will set the name of the animal
+            }
+            setSound(sound) {
+                this.sound = sound;// This will set the sound of the animal
+            }
+            speak() {
+                if (this.name === undefined) {
+                    this.name = "The dog"; // This will set the name to 'The dog' if it's undefined 1st Method
+                    // console.log("the dog has no name and he's woof woof") // This will print 'the dog has no name and he's woof woof'
+                }
+                if (this.sound === undefined) {
+                    this.sound = "Doesn't talk"; // This will set the sound to 'Doesn't talk' if it's undefined 
+                }
+                console.log(`The dog's named is ${this.name} and he's ${this.sound}`); // This will print 'The dog's name is <name>'
+            }
+        }
+        const dog = new Animal();
+        dog.setName(); // This will set the name of the dog to 'Arthur'
+        dog.setSound(); // This will set the speak of the dog to 'woof woof'
+        dog.speak(); // This will call the speak method of the dog object and print 'The dog's name is Arthur and he's woof woof'
 
     </script>
 </body>

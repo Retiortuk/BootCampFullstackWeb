@@ -132,7 +132,31 @@
         //     console.log(num); // This will always execute regardless of whether an error occurred or not
         // }
 
-        
+        // // Example of 'this' in js
+        // const person = {
+        //     "name" : "john",
+        //     greet() {
+        //         console.log(`Hello My name is ${this.name}`); // This will print 'Hello My name is john'
+        //     }
+        //     // this is a method of the object 'person' and 'this' refers to the object itself only inside the method
+        // }
+        // person.greet(); // This will call the greet method of the person object 
+
+        // // Exmple of 'this' in a function
+        // function counter () {
+        //     if(this.total === undefined) { // This will check if 'total' is undefined
+        //         this.total = 1; // This will create a new property 'total' on the global object
+        //     } else {
+        //         this.total++; // This will increment the 'total' property by 1
+        //     }
+        //     console.log(this.total); // This will print the 'total' property
+        // }
+        // counter(); // This will call the counter function and print 1
+        // counter(); // This will call the counter function again and print 2
+        // counter(); // This will call the counter function again and print 3     
+        // counter(); // This will call the counter function again and print 4
+        // counter(); // This will call the counter function again and print 5
+
     </script>
 </body>
 </html>

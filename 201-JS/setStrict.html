@@ -107,19 +107,32 @@
         // Math.floor(Math.random() * 10); // This will return a random integer between 0 and 9
 
         // Random Guessing games
-        while (true) {
-            let userNumber = prompt("Enter a number between 1 and 10: "); // Prompt the user to enter a number
-            userNumber = Number(userNumber); // Convert the input to a number
+        // while (true) {
+        //     let userNumber = prompt("Enter a number between 1 and 10: "); // Prompt the user to enter a number
+        //     userNumber = Number(userNumber); // Convert the input to a number
 
-            const randomNumber = Math.ceil(Math.random() * 10); // Generate a random number between 1 - 10
+        //     const randomNumber = Math.ceil(Math.random() * 10); // Generate a random number between 1 - 10
 
-            if (userNumber === randomNumber) {
-                alert("You guessed the number correctly!"); // If the user guessed the number correctly, show an alert
-                break
-            } else {
-                alert(`Wrong Guess! the correct numeber was ${randomNumber}`);
-            }
-        }
+        //     if (userNumber === randomNumber) {
+        //         alert("You guessed the number correctly!"); // If the user guessed the number correctly, show an alert
+        //         break
+        //     } else {
+        //         alert(`Wrong Guess! the correct numeber was ${randomNumber}`);
+        //     }
+        // }
+
+        // Example of try catch error
+        // const num = 10;
+        // try {
+        //     num = num + 20;
+        //      // This will throw an error because 'num' is a constant and cannot be reassigned
+        // } catch(error){
+        //     console.warn("Error Code:", error); // This will catch the error and print it to the console
+        // } finally {
+        //     console.log(num); // This will always execute regardless of whether an error occurred or not
+        // }
+
+        
     </script>
 </body>
 </html>

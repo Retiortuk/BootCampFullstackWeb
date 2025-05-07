@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Star Wars Character</title>
+</head>
+<body>
+
+    <strong>Name:</strong>
+    <div id="name">...</div>
+
+    <strong>Gender:</strong>
+    <div id="gender">...</div>
+    
+    <strong>Height:</strong>
+    <div id="height">...</div>
+    
+    <strong>Birthyear:</strong>
+    <div id="birthyear">...</div>
+
+    <button class="generate">Randomize!</button>
+    
+    <script>
+        // Crate a generate character information from star wars using fetcgh API
+        // Declaration of the variable generateCharacter
+        const name = document.getElementById("name");
+        const gender = document.getElementById("gender");
+        const height = document.getElementById("height");
+        const birthyear = document.getElementById("birthyear");
+        const button = document.querySelector(".generate");
+
+        // Function to generate a random character
+        button.addEventListener("click", function(a) {
+            a.preventDefault(); // Prevent the default action of the button
+            name.innerHTML = '<em>Loading...</em>';
+            gender.innerHTML = '<em>Loading...</em>';
+            height.innerHTML = '<em>Loading...</em>';
+            birthyear.innerHTML = '<em>Loading...</em>';
+
+            // Generate a random number between 1 and 88
+            const generateCharacter = Math.ceil(Math.random() * 88);
+            fetch(`https://swapi.py4e.com/api/people/${generateCharacter}/`)
+                .then(response => response.json()) // Convert the response to JSON
+                .then(character => { // variable character is the response from the API
+
+                    setTimeout (()=>{
+                        name.innerHTML = character.name; // Display the name of the character
+                        gender.innerHTML = character.gender; // Display gender of the character
+                        height.innerHTML = character.height + " cm"; // Display the height of the character
+                        birthyear.innerHTML = character.birth_year; // Display the birth year of the character
+                    }, 1000); // Set a timeout of 1 second before displaying the character information make loading effect
+                
+                })
+        })
+        
+    </script>
+</body>
+</html>

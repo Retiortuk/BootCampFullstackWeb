@@ -17,7 +17,7 @@
 
     <body>
         <!-- NABAR -->
-        <nav>
+        <nav id="navbar-example" class="sticky-top">
             <div class="container-navbar bg-light shadow p-3 pt-3">
                 <!-- ROW FOR BRAND, SEARCH, USER REQ -->
                 <div class="row nav-1 align-items-center">
@@ -69,20 +69,20 @@
                 <!-- FOR ICONS USER + CART IN THE RIGHT TOP(Mobile) END -->
 
                 <!-- ROW FOR MENUS -->
-                <div class="row pb-1 nav-2 align-items-center text-center">
+                <div class="row  nav-2 align-items-center text-center">
                     <div class="col d-flex align-items-center justify-content-center">
                         <ul class="nav gap-4 pt-3">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link" aria-current="page" href="#home-sect">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Featured</a>
+                                <a class="nav-link" href="#featured-sect">Featured</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Menu</a>
+                                <a class="nav-link" href="#menu-sect">Menu</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About Ngopi.</a>
+                                <a class="nav-link" href="#about-sect">About Ngopi.</a>
                             </li>
                         </ul>
                     </div>
@@ -93,189 +93,201 @@
         <!-- NAVBAR-END -->
 
         <!-- CONTENT -->
-        <div class="container-main">
+        <div id="scroll-container" class="container-main" data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="100" tabindex="0">
 
             <!-- home-sect -->
-            <div class="row home-sect">
-                
-                <!-- Welcoming User -->
-                <div class="col-12 mb-4" style="font-family: Plus Jakarta Sans, sans-serif;">
-                    <h1 class="text-center mt-5">Welcome to Ngopi.</h1>
-                    <p class="text-center">Your favorite coffee and toast shop</p>
-                </div>
-
-                <!-- IMAGE-HOME and DESCRIPTION-PROFILE -->
-                <div class="col-12 d-flex flex-md-row flex-column align-items-center justify-content-center mt-5 gap-5">
-                    <!-- IMAGE-HOME -->
-                    <div class="col-4 image-home">
-                            <img src="/images/coffee.png" class="img-fluid" alt="Coffee">
+            <section id="home-sect" class="py-1">
+                <div class="row home-section">
+                    
+                    <!-- Welcoming User -->
+                    <div class="col-12 mb-4" style="font-family: Plus Jakarta Sans, sans-serif;">
+                        <h1 class="text-center mt-5">Welcome to Ngopi.</h1>
+                        <p class="text-center">Your favorite coffee and toast shop</p>
                     </div>
-
-                    <!-- DESCRIPTION-PROFILE -->
-                    <div class="col-md-4 col-10 d-flex align-items-center justify-content-center text-md-start text-center mt-4 mt-md-0" style="font-family: Plus Jakarta Sans, sans-serif;">
-                        <div class="description-home">
-                            <h2 class="card-title mb-3">Coffee at Ngopi.</h2>
-                            <p class="card-text">Ngopi invites you to experience the authentic taste of Central Java with our wide range of local coffee blends. Grown in the fertile volcanic soil of our homeland, each blend captures the distinct terroir of the region, offering a unique sensory journey. From the robust kick of our Robusta to the nuanced sweetness of our Arabica, we meticulously select and expertly roast the finest beans to unlock their full aromatic potential. Discover coffee that is rich in flavor, steeped in tradition, and brimming with the spirit of Purwokerto.</p>
+    
+                    <!-- IMAGE-HOME and DESCRIPTION-PROFILE -->
+                    <div class="col-12 d-flex flex-md-row flex-column align-items-center justify-content-center mt-5 gap-5">
+                        <!-- IMAGE-HOME -->
+                        <div class="col-4 image-home">
+                                <img src="/images/coffee.png" class="img-fluid" alt="Coffee">
                         </div>
-                    </div>
-                </div>     
-            </div>
+    
+                        <!-- DESCRIPTION-PROFILE -->
+                        <div class="col-md-4 col-10 d-flex align-items-center justify-content-center text-md-start text-center mt-4 mt-md-0" style="font-family: Plus Jakarta Sans, sans-serif;">
+                            <div class="description-home">
+                                <h2 class="card-title mb-3">Coffee at Ngopi.</h2>
+                                <p class="card-text">Ngopi invites you to experience the authentic taste of Central Java with our wide range of local coffee blends. Grown in the fertile volcanic soil of our homeland, each blend captures the distinct terroir of the region, offering a unique sensory journey. From the robust kick of our Robusta to the nuanced sweetness of our Arabica, we meticulously select and expertly roast the finest beans to unlock their full aromatic potential. Discover coffee that is rich in flavor, steeped in tradition, and brimming with the spirit of Purwokerto.</p>
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+            </section>
             <!-- Home-Sect END -->
 
             <!-- Featured-SECT -->
-            <div class="row featured-sect mt-5">
-                <div class="col-12 mb-4">
-                    <h2 class="text-center" style="font-family: Plus Jakarta Sans, sans-serif;">Featured</h2>
-                    <p class="text-center" style="font-family: Plus Jakarta Sans, sans-serif;">Our best-selling coffee and toast</p>
-                </div>
+            <section id="featured-sect" class="py-1">
 
-                <!-- Featured-Card -->
-                <div class="card-container-feature d row d-flex justify-content-center gap-3 mt-4" style="font-family: Plus Jakarta Sans, sans-serif;">
-                    <div class="col-md-2 col-4 d-flex justify-content-center">
-                        <div class="card mx-auto" style="width: 18rem;">
-                            <img src="/images/kopi-toast.webp" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Milk Coffee and Bulgogi Toast</h5>
-                                <div class="price-cartAdd d-flex justify-content-between align-items-center">
-                                    <p class="card-text price fw-bold">$30</p>
-                                    <a href="#" class="btn btn-dark">+</a>
-                                </div>
-                            </div>  
-                        </div>
+                <div class="row featured-section mt-5">
+                    <div class="col-12 mb-4">
+                        <h2 class="text-center" style="font-family: Plus Jakarta Sans, sans-serif;">Featured</h2>
+                        <p class="text-center" style="font-family: Plus Jakarta Sans, sans-serif;">Our best-selling coffee and toast</p>
                     </div>
-                    <div class="col-md-2 col-4 d-flex justify-content-center">
-                        <div class="card mx-auto" style="width: 18rem;">
-                            <img src="/images/caramel-mahiato.webp" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Caramel Machiato</h5>
-                                <div class="price-cartAdd d-flex justify-content-between align-items-center">
-                                    <p class="card-text price fw-bold">$30</p>
-                                    <a href="#" class="btn btn-dark">+</a>
-                                </div>
-                            </div>  
+    
+                    <!-- Featured-Card -->
+                    <div class="card-container-feature d row d-flex justify-content-center gap-3 mt-4" style="font-family: Plus Jakarta Sans, sans-serif;">
+                        <div class="col-md-2 col-4 d-flex justify-content-center">
+                            <div class="card mx-auto" style="width: 18rem;">
+                                <img src="/images/kopi-toast.webp" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Milk Coffee and Bulgogi Toast</h5>
+                                    <div class="price-cartAdd d-flex justify-content-between align-items-center">
+                                        <p class="card-text price fw-bold">$30</p>
+                                        <a href="#" class="btn btn-dark">+</a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
+                        <div class="col-md-2 col-4 d-flex justify-content-center">
+                            <div class="card mx-auto" style="width: 18rem;">
+                                <img src="/images/caramel-mahiato.webp" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Caramel Machiato</h5>
+                                    <div class="price-cartAdd d-flex justify-content-between align-items-center">
+                                        <p class="card-text price fw-bold">$30</p>
+                                        <a href="#" class="btn btn-dark">+</a>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-4 d-flex justify-content-center">
+                            <div class="card mx-auto" style="width: 18rem;">
+                                <img src="/images/kopi-susu.webp" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Milk Coffee</h5>
+                                    <div class="price-cartAdd d-flex justify-content-between align-items-center">
+                                        <p class="card-text price fw-bold">$30</p>
+                                        <a href="#" class="btn btn-dark">+</a>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-4 d-flex justify-content-center">
+                            <div class="card mx-auto" style="width: 18rem;">
+                                <img src="/images/spicy-bulgogi.webp" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Spicy Bulgogi Toast</h5>
+                                    <div class="price-cartAdd d-flex justify-content-between align-items-center">
+                                        <p class="card-text price fw-bold">$30</p>
+                                        <a href="#" class="btn btn-dark">+</a>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div> 
                     </div>
-                    <div class="col-md-2 col-4 d-flex justify-content-center">
-                        <div class="card mx-auto" style="width: 18rem;">
-                            <img src="/images/kopi-susu.webp" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Milk Coffee</h5>
-                                <div class="price-cartAdd d-flex justify-content-between align-items-center">
-                                    <p class="card-text price fw-bold">$30</p>
-                                    <a href="#" class="btn btn-dark">+</a>
-                                </div>
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-4 d-flex justify-content-center">
-                        <div class="card mx-auto" style="width: 18rem;">
-                            <img src="/images/spicy-bulgogi.webp" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Spicy Bulgogi Toast</h5>
-                                <div class="price-cartAdd d-flex justify-content-between align-items-center">
-                                    <p class="card-text price fw-bold">$30</p>
-                                    <a href="#" class="btn btn-dark">+</a>
-                                </div>
-                            </div>  
-                        </div>
-                    </div> 
+                    <!-- FEATURED CARD END -->
                 </div>
-                <!-- FEATURED CARD END -->
-            </div>
+            </section>
             <!-- FEATURED SECT END -->
 
             <!-- MENUS SECT -->
-            <div class="row menu-sect mt-5 pt-4">
-                <div class="col-12 mb-4">
-                    <h2 class="text-center" style="font-family: Plus Jakarta Sans, sans-serif;">Menu</h2>
-                    <p class="text-center" style="font-family: Plus Jakarta Sans, sans-serif;">All of our menus</p>
-                </div>
-            </div>
+            <section id="menu-sect" class="py-1">
 
-            <!-- MENU CARD -->
-            <div class="card-container-menu d row d-flex justify-content-center gap-3 mt-4" style="font-family: Plus Jakarta Sans, sans-serif;">
-                    <div class="col-md-2 col-4 d-flex justify-content-center">
-                        <div class="card mx-auto" style="width: 18rem;">
-                            <img src="/images/kopi-toast.webp" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Milk Coffee and Bulgogi Toast</h5>
-                                <div class="price-cartAdd d-flex justify-content-between align-items-center">
-                                    <p class="card-text price fw-bold">$30</p>
-                                    <a href="#" class="btn btn-dark">+</a>
-                                </div>
-                            </div>  
-                        </div>
+                <div class="row menu-section mt-5 pt-4">
+                    <div class="col-12 mb-4">
+                        <h2 class="text-center" style="font-family: Plus Jakarta Sans, sans-serif;">Menu</h2>
+                        <p class="text-center" style="font-family: Plus Jakarta Sans, sans-serif;">All of our menus</p>
                     </div>
-                    <div class="col-md-2 col-4 d-flex justify-content-center">
-                        <div class="card mx-auto" style="width: 18rem;">
-                            <img src="/images/caramel-mahiato.webp" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Caramel Machiato</h5>
-                                <div class="price-cartAdd d-flex justify-content-between align-items-center">
-                                    <p class="card-text price fw-bold">$30</p>
-                                    <a href="#" class="btn btn-dark">+</a>
-                                </div>
-                            </div>  
+                </div>
+    
+                <!-- MENU CARD -->
+                <div class="card-container-menu d row d-flex justify-content-center gap-3 mt-4" style="font-family: Plus Jakarta Sans, sans-serif;">
+                        <div class="col-md-2 col-4 d-flex justify-content-center">
+                            <div class="card mx-auto" style="width: 18rem;">
+                                <img src="/images/kopi-toast.webp" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Milk Coffee and Bulgogi Toast</h5>
+                                    <div class="price-cartAdd d-flex justify-content-between align-items-center">
+                                        <p class="card-text price fw-bold">$30</p>
+                                        <a href="#" class="btn btn-dark">+</a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2 col-4 d-flex justify-content-center">
-                        <div class="card mx-auto" style="width: 18rem;">
-                            <img src="/images/kopi-susu.webp" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Milk Coffee</h5>
-                                <div class="price-cartAdd d-flex justify-content-between align-items-center">
-                                    <p class="card-text price fw-bold">$30</p>
-                                    <a href="#" class="btn btn-dark">+</a>
-                                </div>
-                            </div>  
+                        <div class="col-md-2 col-4 d-flex justify-content-center">
+                            <div class="card mx-auto" style="width: 18rem;">
+                                <img src="/images/caramel-mahiato.webp" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Caramel Machiato</h5>
+                                    <div class="price-cartAdd d-flex justify-content-between align-items-center">
+                                        <p class="card-text price fw-bold">$30</p>
+                                        <a href="#" class="btn btn-dark">+</a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2 col-4 d-flex justify-content-center">
-                        <div class="card mx-auto" style="width: 18rem;">
-                            <img src="/images/spicy-bulgogi.webp" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Spicy Bulgogi Toast</h5>
-                                <div class="price-cartAdd d-flex justify-content-between align-items-center">
-                                    <p class="card-text price fw-bold">$30</p>
-                                    <a href="#" class="btn btn-dark">+</a>
-                                </div>
-                            </div>  
+                        <div class="col-md-2 col-4 d-flex justify-content-center">
+                            <div class="card mx-auto" style="width: 18rem;">
+                                <img src="/images/kopi-susu.webp" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Milk Coffee</h5>
+                                    <div class="price-cartAdd d-flex justify-content-between align-items-center">
+                                        <p class="card-text price fw-bold">$30</p>
+                                        <a href="#" class="btn btn-dark">+</a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                    </div> 
-            </div>
+                        <div class="col-md-2 col-4 d-flex justify-content-center">
+                            <div class="card mx-auto" style="width: 18rem;">
+                                <img src="/images/spicy-bulgogi.webp" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Spicy Bulgogi Toast</h5>
+                                    <div class="price-cartAdd d-flex justify-content-between align-items-center">
+                                        <p class="card-text price fw-bold">$30</p>
+                                        <a href="#" class="btn btn-dark">+</a>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div> 
+                </div>
+            </section>
             <!-- MENU SECT END -->
 
             <!-- About Ngpi. -->
-            <div class="row about-sect mt-5 pt-4 mb-5" style="font-family: Plus Jakarta Sans, sans-serif;">
-                <!-- TAGLINE  -->
-                <div class="col-12 about-headline text-center justify-content-center align-items-center mt-5 pt-5">
-                    <h1>About Ngopi.</h1>
-                    <p>Learn of our journey.</p>
-                </div>
+            <section id="about-sect" class="py-1">
 
-                <!-- ABOUT CONTENT -->
-                <div class="col-12 about-container d-flex flex-md-row flex-column justify-content-center align-items-center mt-3">
-                    <!-- IMG -->
-                    <div class="col-4">
-                        <img src="images/ngopi-icon.png" class="img-fluid" alt="Ngopi.">
+                <div class="row about-section mt-5 pt-4 mb-5" style="font-family: Plus Jakarta Sans, sans-serif;">
+                    <!-- TAGLINE  -->
+                    <div class="col-12 about-headline text-center justify-content-center align-items-center mt-5 pt-5">
+                        <h1>About Ngopi.</h1>
+                        <p>Learn of our journey.</p>
                     </div>
-
-                    <!-- TEXT -->
-                    <div class="col-md-4 col-10 d-flex align-items-center justify-content-center text-md-start text-center mt-4 mt-md-0">
-                        <div class="about-text">
-                            <h2 class="mb-3">Ngopi.</h2>
-                            <p>Ngopi Caffee is more than just a coffee shop; it's a community hub, a place where the rich aroma of freshly brewed coffee blends with the warmth of good company and conversation. Rooted in the Indonesian tradition of "Ngopi" - a relaxed invitation to have coffee and connect - we aim to create a welcoming and vibrant space for everyone to enjoy their daily dose of delight.</p>
-                            <p>Inspired by the lively "warungs" and "kedais" of Indonesia, where coffee breaks are an integral part of daily life and social interaction, Ngopi Caffee was established in 2026 in the heart of Purwokerto. Our founders, Gesa, envisioned a modern interpretation of this tradition, offering high-quality coffee and a comfortable ambiance that encourages connection and relaxation</p>
+    
+                    <!-- ABOUT CONTENT -->
+                    <div class="col-12 about-container d-flex flex-md-row flex-column justify-content-center align-items-center mt-3">
+                        <!-- IMG -->
+                        <div class="col-4">
+                            <img src="images/ngopi-icon.png" class="img-fluid" alt="Ngopi.">
+                        </div>
+    
+                        <!-- TEXT -->
+                        <div class="col-md-4 col-10 d-flex align-items-center justify-content-center text-md-start text-center mt-4 mt-md-0">
+                            <div class="about-text">
+                                <h2 class="mb-3">Ngopi.</h2>
+                                <p>Ngopi Caffee is more than just a coffee shop; it's a community hub, a place where the rich aroma of freshly brewed coffee blends with the warmth of good company and conversation. Rooted in the Indonesian tradition of "Ngopi" - a relaxed invitation to have coffee and connect - we aim to create a welcoming and vibrant space for everyone to enjoy their daily dose of delight.</p>
+                                <p>Inspired by the lively "warungs" and "kedais" of Indonesia, where coffee breaks are an integral part of daily life and social interaction, Ngopi Caffee was established in 2026 in the heart of Purwokerto. Our founders, Gesa, envisioned a modern interpretation of this tradition, offering high-quality coffee and a comfortable ambiance that encourages connection and relaxation</p>
+                            </div>
                         </div>
                     </div>
+    
+                    <!-- MOTTO -->
+                    <div class="col-12 about-motto text-center align-items-center justify-content-center mt-5">
+                        <h2>"Let's Ngopi."</h2>
+                        <p class="fst-italic">~ Est. 2026 ~</p>
+                    </div>
                 </div>
-
-                <!-- MOTTO -->
-                <div class="col-12 about-motto text-center align-items-center justify-content-center mt-5">
-                    <h2>"Let's Ngopi."</h2>
-                    <p class="fst-italic">~ Est. 2026 ~</p>
-                </div>
-            </div>
+            </section>
+            <!-- ABOUT SECT END -->
         </div> 
         <!-- CONTENT END -->
         

@@ -21,9 +21,10 @@
     
     <!-- <section id="navbar"></section> -->
 
-    <input type="text" value="">
-
-    <!-- <div id="box"></div> -->
+    <form>
+        <input type="text" name="name">
+        <button type="submit">Submit it</button>
+    </form>
     
     <!-- Jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
@@ -118,6 +119,13 @@
             //         websiteURL = `http://${websiteURL}` // add http://
             //     }
             //     $(this).val(websiteURL); // showed to the user/input now http://youtube.com then youtube.com
+            // })
+
+            // prevent listener
+            // $("button").on("click", function(e) {
+            //     e.preventDefault(); // it will prevent the action
+            //     $("input").val(""); 
+            //     console.log("Nothing happened")
             // })
 
 

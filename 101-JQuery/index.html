@@ -3,13 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        #box {
-            width: 300px;
-            height: 300px;
-            background-color: black;
-        }
-    </style>
     <title>Jquery 101</title>
 </head>
 <body>
@@ -28,10 +21,9 @@
     
     <!-- <section id="navbar"></section> -->
 
-    <!-- <input type="text" value="Hello World123">
-    <section class="example"></section> -->
+    <input type="text" value="Hello World123">
 
-    <div id="box"></div>
+    <!-- <div id="box"></div> -->
     
     <!-- Jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
@@ -108,6 +100,11 @@
             //     .on("mouseleave", function() {
             //         console.log("You Leave The Zone")
             //     })
+
+            // Keyup Event Listener
+            // $("input").on("keyup" , function() { // keyup is when every single you click keyboard it will runing the function
+            //     console.log($(this).val());
+            // })
 
 
 

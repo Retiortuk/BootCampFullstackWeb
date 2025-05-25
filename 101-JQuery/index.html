@@ -24,9 +24,9 @@
     <!-- <input type="text" value="Hello World123">
     <section class="example"></section> -->
 
-    <h1>
-        this is text
-    </h1>
+    <div class="target">
+        before and after
+    </div>
     
     <!-- Jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
@@ -62,10 +62,14 @@
             // $("h1").append("<u>This is Uderline</u>") // Append will pop up new html element at the end of it
             // $("h1").prepend("<i>this is italice</i>") // While Prepend will pop up new html element at the front/start of it
             // // Another example of writing it
-            $("h1")
-                .text("This Was Changed")
-                .append("<u>This is underline")
-                .prepend("<i>this is italic</i>")
+            // $("h1")
+            //     .text("This Was Changed")
+            //     .append("<u>This is underline")
+            //     .prepend("<i>this is italic</i>")
+
+            // Before and After in jQuery
+            $(".target").before("<h1>Before Text</h1>") // will add  element before that .target
+            $(".target").after("<p>After Text</p>")  // will add  element after that .target
 
 
 

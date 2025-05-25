@@ -24,11 +24,7 @@
     <!-- <input type="text" value="Hello World123">
     <section class="example"></section> -->
 
-    <div id="parent">
-        <strong>This is Bold</strong>
-        <em>This is Italic</em>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi molestiae distinctio quisquam aliquam autem. Quam, repellendus aspernatur reiciendis excepturi perferendis explicabo fugit magnam quibusdam voluptates nobis assumenda fugiat, nam reprehenderit.</p>
-    </div>
+    <div id="klik"></div>
     
     <!-- Jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
@@ -73,11 +69,29 @@
             // // remove element in jQuery
             // $("div p.middle-p").remove() // remove() is used for delete the selected element
 
-            // empty element child (parent)
-            const $parent = $("div#parent"); // '$' is variable to make it callable in jQuery
-            $parent.empty(); // it will empty the child of #parent
-            $parent.html("<h1>Hello World</h1>") // it will add new element h1
-
+            // // empty element child (parent)
+            // const $parent = $("div#parent"); // '$' is variable to make it callable in jQuery
+            // $parent.empty(); // it will empty the child of #parent
+            // $parent.html("<h1>Hello World</h1>") // it will add new element h1
+            
+            // Event Listener
+            // $("div#klik").html("<button>Click Me</button>")
+            // 1st Method
+            // $("button").click(function() {
+            //     console.log("I'm Clicked");
+            // });
+                
+            // 2nd Method => Commonly Uses this method
+            // $("button").on("click", function() {
+            //     console.log("I'am Clicked");
+            // });
+                    
+            // 3rd Method the dynamic way
+            // $(document).on("click", "button", function() { // it will scan the entire document for element button
+            //     console.log("i'm clicked");
+            // });
+            
+            // $("div#klik").html("<button>Click Me</button>") // if the element on the bottom still works because the function scan the entire doc first
 
 
 

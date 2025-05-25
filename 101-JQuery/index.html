@@ -24,24 +24,15 @@
     <!-- <input type="text" value="Hello World123">
     <section class="example"></section> -->
 
-    <div>
-        <p>
-            Text 1
-        </p>
-        <p class="middle-p">
-            Text 2
-        </p>
-        <p>
-            Text 3
-        </p>
+    <div id="parent">
+        <strong>This is Bold</strong>
+        <em>This is Italic</em>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi molestiae distinctio quisquam aliquam autem. Quam, repellendus aspernatur reiciendis excepturi perferendis explicabo fugit magnam quibusdam voluptates nobis assumenda fugiat, nam reprehenderit.</p>
     </div>
     
     <!-- Jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <script>
-
-        
-            
+    <script>    
         // JQUERY
         $(document).ready(function() {
 
@@ -79,8 +70,14 @@
             // $(".target").before("<h1>Before Text</h1>") // will add  element before that .target
             // $(".target").after("<p>After Text</p>")  // will add  element after that .target
 
-            // remove element in jQuery
-            $("div p.middle-p").remove() // remove() is used for delete the selected element
+            // // remove element in jQuery
+            // $("div p.middle-p").remove() // remove() is used for delete the selected element
+
+            // empty element child (parent)
+            const $parent = $("div#parent"); // '$' is variable to make it callable in jQuery
+            $parent.empty(); // it will empty the child of #parent
+            $parent.html("<h1>Hello World</h1>") // it will add new element h1
+
 
 
 

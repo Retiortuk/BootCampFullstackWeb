@@ -21,8 +21,12 @@
     
     <!-- <section id="navbar"></section> -->
 
-    <input type="text" value="Hello World123">
-    <section class="example"></section>
+    <!-- <input type="text" value="Hello World123">
+    <section class="example"></section> -->
+
+    <h1>
+        this is text
+    </h1>
     
     <!-- Jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
@@ -54,6 +58,14 @@
             // const value = $("input").val(); // Using Val() to get value of form .input also you can changed value by val("Input Changed")
             // $(".example").text(value);
 
+            // Append Prepend in jQuery
+            // $("h1").append("<u>This is Uderline</u>") // Append will pop up new html element at the end of it
+            // $("h1").prepend("<i>this is italice</i>") // While Prepend will pop up new html element at the front/start of it
+            // // Another example of writing it
+            $("h1")
+                .text("This Was Changed")
+                .append("<u>This is underline")
+                .prepend("<i>this is italic</i>")
 
 
 

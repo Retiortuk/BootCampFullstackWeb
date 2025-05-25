@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery 101</title>
+</head>
+<body>
+
+    <h1 class="customClass">Hello World</h1>
+    
+    <!-- Jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+
+        // // Jquery Test
+        // $(document).ready(function () {
+        //     console.log("Jquery is Loaded!");
+        // });
+
+        // Select Element and Changed it using Jquery
+        $(document).ready(function() {
+            // jqeury search element with class .customeClass and .text is changed the text to "Something"
+            $(".customClass").text("This Was Changed Via Jquery");
+        });
+    </script>
+</body>
+</html>

@@ -9,9 +9,6 @@
             height: 300px;
             background-color: black;
         }
-        .blue {
-            background-color: blue;
-        }
         .expand {
             width: 100%;
         }
@@ -30,9 +27,9 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellat eos, nobis, illum earum pariatur cumque placeat temporibus nam quia tempora maiores atque nulla, architecto eius sunt harum libero rem?
     </p> -->
 
-    <button class="remove-blue">remove blue</button>
-    <button class="remove-expand">remove expand</button>
-    <div class="box blue expand"></div>
+    
+    <button class="to-expand">click</button>
+    <div class="box expand"></div>
     
     
     <!-- <section id="navbar"></section> -->
@@ -167,6 +164,14 @@
             // $removeExpand.on("click", () => {
             //     $box.removeClass("expand");
             // })
+
+            // TOGGLE CLASES IN JQUERY
+            const $box = $(".box");
+
+            $(".to-expand").on("click", function() {
+                $box.toggleClass("expand")
+            })
+
 
 
 

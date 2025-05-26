@@ -9,9 +9,6 @@
             height: 300px;
             background-color: black;
         }
-        .expand {
-            width: 100%;
-        }
     </style>
     <title>Jquery 101</title>
 </head>
@@ -28,7 +25,7 @@
     </p> -->
 
     
-    <button class="to-expand">click</button>
+    <button>click</button>
     <div class="box expand"></div>
     
     
@@ -166,11 +163,17 @@
             // })
 
             // TOGGLE CLASES IN JQUERY
-            const $box = $(".box");
+            // const $box = $(".box");
 
-            $(".to-expand").on("click", function() {
-                $box.toggleClass("expand")
-            })
+            // $(".to-expand").on("click", function() {
+            //     $box.toggleClass("expand")
+            // })
+
+            // TOGGLE FADEIN FADEOUT
+            // $("button").on("click", function () {
+            //     // $(".box").fadeToggle(); // With Fade in Fade out
+            //     $(".box").toggle() // just toggle without fade in and out
+            // })
 
 
 

@@ -9,6 +9,12 @@
             height: 300px;
             background-color: black;
         }
+        .blue {
+            background-color: blue;
+        }
+        .expand {
+            width: 100%;
+        }
     </style>
     <title>Jquery 101</title>
 </head>
@@ -24,9 +30,10 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellat eos, nobis, illum earum pariatur cumque placeat temporibus nam quia tempora maiores atque nulla, architecto eius sunt harum libero rem?
     </p> -->
 
-    <button class="hide-element">hide element</button>
-    <div class="box"></div>
-    <button class="show-element">Show element</button>
+    <button class="remove-blue">remove blue</button>
+    <button class="remove-expand">remove expand</button>
+    <div class="box blue expand"></div>
+    
     
     <!-- <section id="navbar"></section> -->
 
@@ -136,13 +143,18 @@
 
             // SHOW AND HIDE ELEMENT
             // HIDE
-            $(".hide-element").on("click", function() {
-                $(".box").hide();
-            });
+            // $(".hide-element").on("click", function() {
+            //     $(".box").hide();
+            // });
             // SHOW
-            $(".show-element").on("click", function () {
-                $(".box").show();
-            })
+            // $(".show-element").on("click", function () {
+            //     $(".box").show();
+            // });
+
+            // ADD CUSTOM CLASS IN JQuery
+            // $("button").on("click", () => {
+            //     $(".box").addClass("expand") // addClass()
+            // });
 
 
 

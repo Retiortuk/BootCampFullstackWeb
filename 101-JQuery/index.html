@@ -25,8 +25,12 @@
     </p> -->
 
     
-    <button>click</button>
-    <div class="box expand"></div>
+    <!-- <button>click</button>
+    <div class="box expand"></div> -->
+
+    <div>first item</div>
+    <div>second item</div>
+    <div>third item</div>
     
     
     <!-- <section id="navbar"></section> -->
@@ -183,15 +187,41 @@
             // });
             
             // ANIMATION IN JQUERY
-            $("button").on("click", function() {
-                $(".box").animate({
-                    opacity: 0.5,
-                    width: "100%",
-                }, 4000, function() {
-                    console.log("Animation Completed");
-                });
-            });
+            // $("button").on("click", function() {
+            //     $(".box").animate({ // animate() is used to animate the element
+            //         opacity: 0.5,
+            //         width: "100%",
+            //     }, 4000, function() {
+            //         console.log("Animation Completed");
+            //     });
+            // });
+
+            // DIMENSIONS IN JQUERY
+            // $(window).on("resize", function() {
+            //     console.log( $(window).width() + " X " + $(window).height());
+
+            //     if($(window).width < 600) {
+            //         $("body").css("background-color", "red");
+            //     } else {
+            //         console.log("Window Width is greater than 100px");
+            //     }
+            // })
+
+            // EACH LOOPING IN JQUERY
+            // $("div").each(function(index, element){ // each() is used to loop through each element
+            //     const originalText = $(element).text(); // this will get the original text of the element
+            //     $(element).text(`${index + 1} ${originalText}`); // this will loop through each div and change the text to This is 1 item, This is 2 item, etc.
+
+            //     if (index == 2) {
+            //         $(element).css("color", "red"); // this will change the color of the third div to red
+            //     } else {
+            //         $(element).css("color", "blue"); // this will change the color of the other divs to blue
+            //     }
+            // });
+
+
             
+
 
 
 

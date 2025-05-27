@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project jQuery</title>
+</head>
+<body>
+
+    <h1 class="nama"></h1>
+    <h1 class="height"></h1>
+    <h1 class="mass"></h1>
+    <div class="img"></div>
+    <button>Click To Generate</button>
+
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            console.log("jQuery is ready!");
+
+            // Event handler for button click
+            $("button").on("click", function() {
+                // Generate a random number between 1 and 88
+                // This is the range of Star Wars characters in the API
+                const generateEndPoint = Math.ceil(Math.random()*88);
+                // GET AJAX
+                $.get(`https://akabab.github.io/starwars-api/api/id/${generateEndPoint}.json`, function(data) { // Callback function to handle the response
+                    console.log(data);
+                    // Update the HTML elements with the data
+                    // Assuming the API returns an object with properties 'name', 'height', 'mass', and 'image'
+                    $(".nama").text(`Name: ${data.name}`);
+                    $(".height").text(`Height: ${data.height}`);
+                    $(".mass").text(`Mass: ${data.mass}`);
+                    $(".img").html(`<img src="${data.image}" alt="${data.name}">`);
+                })
+
+
+            })
+
+            
+        })
+    </script>
+</body>
+</html>

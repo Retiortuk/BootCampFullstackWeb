@@ -222,16 +222,29 @@
             // CHANGE ELEMENTS IN JQUERY
             // $("input").attr("type", "password"); // attr() is used to change the attribute of the element
 
-            // AJAX GET REQUEST IN JQUERY
-            $.get("https://swapi.py4e.com/api/people/2/", function(data) {
-                console.log(data);
-                $("body").append(`<h1>Name: ${data.name}</h1>`);
-                $("body").append(`<h1>Height: ${data.height}</h1>`);
-                $("body").append(`<h1>Mass: ${data.mass}</h1>`);
-            }).fail(function() {
-                console.error("Error fetching data from API");
-                $("body").append("<h1>Error fetching data</h1>");
-            })
+            // AJAX GET/POST REQUEST IN JQUERY
+            //GET REQUEST
+            // $.get("https://swapi.py4e.com/api/people/2/", function(data) { // this is the callback function that will run when the data is received
+            //     console.log(data);
+            //     $("body").append(`<h1>Name: ${data.name}</h1>`);
+            //     $("body").append(`<h1>Height: ${data.height}</h1>`);
+            //     $("body").append(`<h1>Mass: ${data.mass}</h1>`);
+            // }).fail(function() {
+            //     console.error("Error fetching data from API");
+            //     $("body").append("<h1>Error fetching data</h1>");
+            // })
+            // POST REQUEST
+            // $.post("https://httpbin.org/post", // this is the data that will be sent to the server
+            //     {
+            //         name: "John Doe", // this is the data that will be sent to the server
+            //         age: 30,
+            //         city: "New York"
+            //     },
+            //     function(data) { // this is the callback function that will run when the data is received
+            //         console.log("Data Posted Successfully"); 
+            //         console.log(data);
+            //     }
+            // )
 
             
 

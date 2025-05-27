@@ -11,6 +11,7 @@
     <h1 class="height"></h1>
     <h1 class="mass"></h1>
     <div class="img"></div>
+    <!-- <img src="" alt=""> -->
     <button>Click To Generate</button>
 
     <!-- jQuery -->
@@ -33,6 +34,7 @@
                     $(".height").text(`Height: ${data.height}`);
                     $(".mass").text(`Mass: ${data.mass}`);
                     $(".img").html(`<img src="${data.image}" alt="${data.name}">`);
+                    // $("img").attr("src", data.image).attr("alt", data.name); // Another way to set the image using attr method
                 })
 
 

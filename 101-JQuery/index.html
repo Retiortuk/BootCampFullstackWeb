@@ -181,7 +181,17 @@
             //         console.log("Fade Toggle Completed");
             //     });
             // });
-
+            
+            // ANIMATION IN JQUERY
+            $("button").on("click", function() {
+                $(".box").animate({
+                    opacity: 0.5,
+                    width: "100%",
+                }, 4000, function() {
+                    console.log("Animation Completed");
+                });
+            });
+            
 
 
 

@@ -1,6 +1,14 @@
 import './App.css';
 import React from 'react'
 
+class AffiliationsItemRow extends React.Component {
+  render(){
+    return (
+      <li>{this.props.url}</li>
+    )
+  }
+}
+
 class StarWars extends React.Component {
 
   constructor() {
@@ -35,6 +43,11 @@ class StarWars extends React.Component {
   }
 
   render () {
+
+    const affiliations = this.state.affiliations.map((url, i) => {
+      return <AffiliationsItemRow key={i} url={url} />
+    })
+
     return (
       <div>
         {/* To Make name and the others hide before button clicked */}
@@ -46,7 +59,7 @@ class StarWars extends React.Component {
               <p>Gender: {this.state.gender}</p>
               <p>Homeworld: {this.state.homeworld}</p>
               <ul>
-                <li>{this.state.affiliations}</li>
+                {affiliations}
               </ul>
           </div>
         }

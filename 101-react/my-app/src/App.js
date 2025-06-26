@@ -2,19 +2,35 @@ import './App.css';
 import React from 'react'
 
 class StarWars extends React.Component {
+
+  constructor() {
+    super()
+    this.state = {
+      name: null,
+      height: null,
+      homeworld: null,
+      films: []
+    }
+  }
+
   // Event listener when 'click' will run this function
   buttonClick() {
-    console.log("New Character from a button")
+    this.setState({
+      name: 'Luke',
+      height: 172,
+      homeworld: 'Bekasi',
+      films: ['Star Wars 1', 'Star Wars 2']
+    })
   }
 
   render () {
     return (
       <div>
-        <h1>Name</h1>
-        <p>Height: cm</p>
-        <p>Homeworld: </p>
+        <h1>{this.state.name}</h1>
+        <p>Height: {this.state.height} cm</p>
+        <p>Homeworld: {this.state.homeworld} </p>
         <ul>
-          <li>Films in here</li>
+          <li>{this.state.films[0]}</li>
         </ul>
         <button type="button" 
         onClick={() => this.buttonClick()} // when button clicked will run the function buttonClick() 

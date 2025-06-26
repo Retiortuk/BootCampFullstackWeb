@@ -9,6 +9,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         {/* React js Props */}
         <Item name="Gesa" Time="Good Morning"/>
+        <Item name="Gesa" Time="Good Morning"/>
         <a
           className="App-link"
           href="https://reactjs.org"

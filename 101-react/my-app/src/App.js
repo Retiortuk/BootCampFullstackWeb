@@ -16,6 +16,7 @@ class StarWars extends React.Component {
     this.state = {
       CharacterLoaded: false, // Awal nya False
       name: null,
+      image: null,
       height: null,
       gender: null,
       homeworld: null,
@@ -33,6 +34,7 @@ class StarWars extends React.Component {
         console.log(data);
         this.setState({
           name: data.name,
+          image: data.image,
           height: data.height,
           gender: data.gender,
           homeworld: data.homeworld,
@@ -54,6 +56,11 @@ class StarWars extends React.Component {
         {
           this.state.CharacterLoaded && // Secara Default Disini Menjadi True, yang tadi nya false
           <div>
+            {/* Final Project make the image */}
+              <img 
+                src={this.state.image} 
+                alt={this.state.name}
+                style={{maxWidth: '300px', borderRadius: '10px'}}></img>
               <h1>{this.state.name}</h1>
               <p>Height: {this.state.height} cm</p>
               <p>Gender: {this.state.gender}</p>

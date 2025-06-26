@@ -6,6 +6,7 @@ class StarWars extends React.Component {
   constructor() {
     super()
     this.state = {
+      CharacterLoaded: false, // Awal nya False
       name: null,
       height: null,
       homeworld: null,
@@ -19,19 +20,26 @@ class StarWars extends React.Component {
       name: 'Luke',
       height: 172,
       homeworld: 'Bekasi',
-      films: ['Star Wars 1', 'Star Wars 2']
+      films: ['Star Wars 1', 'Star Wars 2'],
+      CharacterLoaded: true // Set menjadi True ketika button di click 
     })
   }
 
   render () {
     return (
       <div>
-        <h1>{this.state.name}</h1>
-        <p>Height: {this.state.height} cm</p>
-        <p>Homeworld: {this.state.homeworld} </p>
-        <ul>
-          <li>{this.state.films[0]}</li>
-        </ul>
+        {/* To Make name and the others hide before button clicked */}
+        {
+          this.state.CharacterLoaded && // Secara Default Disini Menjadi True, yang tadi nya false
+          <div>
+              <h1>{this.state.name}</h1>
+              <p>Height: {this.state.height} cm</p>
+              <p>Homeworld: {this.state.homeworld} </p>
+              <ul>
+                <li>{this.state.films[0]}</li>
+              </ul>
+          </div>
+        }
         <button type="button" 
         onClick={() => this.buttonClick()} // when button clicked will run the function buttonClick() 
         className='btn'>

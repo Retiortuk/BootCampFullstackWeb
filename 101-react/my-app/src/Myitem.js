@@ -1,9 +1,15 @@
 import React from 'react';
 
 class Item extends React.Component {
+    // EventListener in React
+    ClickMe() {
+        console.log("I Clicked: ", this.props.name)
+    }
+
     render () {
         return (
-            <h1>{this.props.Time} {this.props.name}</h1>
+            // Using old html ways to event listener in react  onClick={() => this.functionName()}
+            <h1 onClick={() => this.ClickMe()}>{this.props.Time} {this.props.name}</h1>
         )
     }
 }

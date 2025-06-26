@@ -9,20 +9,29 @@ class StarWars extends React.Component {
       CharacterLoaded: false, // Awal nya False
       name: null,
       height: null,
+      gender: null,
       homeworld: null,
-      films: []
+      affiliations: []
     }
   }
 
   // Event listener when 'click' will run this function
   buttonClick() {
-    this.setState({
-      name: 'Luke',
-      height: 172,
-      homeworld: 'Bekasi',
-      films: ['Star Wars 1', 'Star Wars 2'],
-      CharacterLoaded: true // Set menjadi True ketika button di click 
-    })
+    const randomNumber = Math.ceil(Math.random()*88);
+    const url = `https://akabab.github.io/starwars-api/api/id/${randomNumber}.json`; // assigned the api url to the variable 
+    fetch(url) // fetch it the parameter is the variabel of the url
+      .then(response => response.json()) // make it into json
+      .then(data => { // assign the value/output of the api to variable called 'data'
+        console.log(data);
+        this.setState({
+          name: data.name,
+          height: data.height,
+          gender: data.gender,
+          homeworld: data.homeworld,
+          affiliations: data.affiliations,
+          CharacterLoaded: true // Set menjadi True ketika button di click 
+        })
+      })
   }
 
   render () {
@@ -34,9 +43,10 @@ class StarWars extends React.Component {
           <div>
               <h1>{this.state.name}</h1>
               <p>Height: {this.state.height} cm</p>
-              <p>Homeworld: {this.state.homeworld} </p>
+              <p>Gender: {this.state.gender}</p>
+              <p>Homeworld: {this.state.homeworld}</p>
               <ul>
-                <li>{this.state.films[0]}</li>
+                <li>{this.state.affiliations}</li>
               </ul>
           </div>
         }

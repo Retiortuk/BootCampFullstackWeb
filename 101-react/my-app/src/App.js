@@ -4,7 +4,15 @@ import React from 'react'
 class StarWars extends React.Component {
   render () {
     return (
-      <h1>This is Star Wars</h1>
+      <div>
+        <h1>Name</h1>
+        <p>Height: cm</p>
+        <p>Homeworld: </p>
+        <ul>
+          <li>Films in here</li>
+        </ul>
+        <button type="button" className='btn'>Generate Character</button>
+      </div>
     )
   }
 }

@@ -1,11 +1,14 @@
 import './App.css';
 import Navbar from './components/Navbar';
+import Home from './components/Home';
 
 function App() {
   return (
     <div>
+      {/* Navbar Dari Import Dari components/Navbar.js */}
       <Navbar />
-        <h1>Hello World</h1>
+      {/* Home Dari Import Dari components/Navbar.js */}
+      <Home />
     </div>
   );
 }

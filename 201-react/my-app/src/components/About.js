@@ -3,8 +3,7 @@ import Hero from "./Hero";
 const About = () => {
     return (
         <>
-            <Hero />
-            <h2>About us</h2>
+             <Hero text="About us" /> {/*text berupa seperti nama class yang bisa dipanggil di Hero.js  */}
         </>
     );
 };

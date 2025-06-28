@@ -3,8 +3,7 @@ import Hero from "./Hero";
 const Home = () => {
     return (
         <>
-            <Hero />
-            <h1>Hello World</h1>
+            <Hero text="Welcome To Our Website" /> {/*text berupa seperti nama class yang bisa dipanggil di Hero.js  */}
         </>
     );
 };

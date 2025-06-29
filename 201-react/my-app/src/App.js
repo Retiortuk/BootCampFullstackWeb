@@ -15,7 +15,7 @@ function App() {
   return (
     <div>
       {/* Navbar Dari Import Dari components/Navbar.js */}
-      <Navbar />
+      <Navbar searchText={searchText} setSearchText={setSearchText} />
       <Routes>
 
         {/* Home Dari Import Dari components/Navbar.js GUNAKAN element={} karena React Router v6*/}

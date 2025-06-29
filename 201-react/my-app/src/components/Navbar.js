@@ -1,8 +1,11 @@
-import {Link} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = ({ searchText, setSearchText }) => {
-    
+
+    const navigate = useNavigate(); // Menggunakan useNavigate untuk navigasi programatik
+
     const updateSearch = (event) => {
+        navigate('/search') // Mengarahkan ke halaman search ketika input berubah
         // Mengupdate state searchText dengan nilai input
         // event.target.value adalah nilai dari input search
         setSearchText(event.target.value);

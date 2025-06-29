@@ -8,8 +8,7 @@ import { useState, useEffect } from 'react';
 
 
 function App() {
-
-  const [searchResults, setSearchResults] = useState([]); // State untuk menyimpan hasil pencarian
+  const [searchResults, setSearchResults] = useState([]); // State untuk menyimpan hasil pencarian  
   const [searchText, setSearchText] = useState(''); // State untuk menyimpan teks pencarian
 
   return (

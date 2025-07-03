@@ -11,15 +11,20 @@ function App() {
   const [searchResults, setSearchResults] = useState([]); // State untuk menyimpan hasil pencarian  
   const [searchText, setSearchText] = useState(''); // State untuk menyimpan teks pencarian
   
+  
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/search/movie?api_key=20c140e4adb91f55d3869a54318cf4b4&query=${searchText}`)
-      .then(response => response.json() // Mengambil data dari API
-      .then(data => {
-        console.log("Data:", data);
-        setSearchResults(data.results);
-        // console.log(searchResults);
-      }));
 
+    // useEffect untuk menangani efek samping, seperti pencarian ketika searchText berubah
+    // Jika searchText tidak kosong, maka akan melakukan pencarian
+    if(searchText) {
+      fetch(`https://api.themoviedb.org/3/search/movie?api_key=20c140e4adb91f55d3869a54318cf4b4&query=${searchText}`)
+        .then(response => response.json() // Mengambil data dari API
+        .then(data => {
+          console.log("Data:", data);
+          setSearchResults(data.results);
+          // console.log(searchResults);
+        }));
+    }
   }, [searchText]); // useEffect untuk menangani efek samping, seperti pencarian ketika searchText berubah
 
   return (

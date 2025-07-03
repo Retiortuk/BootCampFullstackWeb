@@ -3,6 +3,23 @@ import Hero from "./Hero";
 // API KEY FROM THEMOVIEDB: 20c140e4adb91f55d3869a54318cf4b4
 // https://api.themoviedb.org/3/search/movie
 
+// MovieCard
+const MovieCard = ({ movie}) => {
+    const posterURL = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`; // URL untuk poster film
+    return (
+        <div className= "col-lg-3 col-md-3 col-2 my-3">
+            <div className="card">
+                <img src={posterURL} class="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">{movie.original_title}</h5>
+                    <a href="#" class="btn btn-primary">Show Details</a>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+// SearchView.js
 const SearchView = ({keyword, searchResults}) => { // Menerima props keyword dan searchResults dari App.js
     // keyword adalah teks yang dicari, searchResults adalah hasil pencarian
     const title = `you search for ${keyword}`; // Judul yang akan ditampilkan di Hero, bisa diubah sesuai kebutuhan
@@ -10,9 +27,7 @@ const SearchView = ({keyword, searchResults}) => { // Menerima props keyword dan
     const ResultsHTML = searchResults.map((obj, index) => { // Menggunakan map untuk mengiterasi setiap hasil pencarian
         // obj adalah setiap objek film dari hasil pencarian, index adalah indeksnya
         return (
-            <div key={index}>
-                {obj.title} {/* Menampilkan judul film dari hasil pencarian */}
-            </div>
+                <MovieCard movie={obj} key={index} /> 
         )
     }) 
 
@@ -20,7 +35,13 @@ const SearchView = ({keyword, searchResults}) => { // Menerima props keyword dan
         <>
             {/* Menampilkan Hero dengan teks yang sesuai */}
             <Hero text={title} /> {/*text berupa seperti nama class yang bisa dipanggil di Hero.js  */}
-            {ResultsHTML} {/* Menampilkan hasil pencarian */}
+            { ResultsHTML && 
+                <div className="container">
+                    <div className="row">
+                        {ResultsHTML} {/* Menampilkan hasil pencarian */}
+                    </div>
+                </div>
+            }
         </>
     );
 };

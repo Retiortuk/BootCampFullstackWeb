@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import SearchView from './components/SearchView';
+import MovieView from './components/MovieView';
 import {Routes, Route} from 'react-router-dom';
 
 
@@ -41,6 +42,8 @@ function App() {
 
         {/* SearchView Dari Import Dari components/SearchView.js GUNAKAN element={} karena React Router v6 */}
         <Route path="/search" element={<SearchView keyword={searchText} searchResults={searchResults} />} />
+
+        <Route path ="/movie/:id" element={<MovieView />} /> {/* Jika path/alamat/endpoint nya /movie/:id maka itu adalah movie view dan berubah ke laman movie view, :id adalah parameter yang akan diambil dari URL */}
 
       </Routes>
     </div>

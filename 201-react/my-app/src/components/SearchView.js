@@ -1,18 +1,20 @@
 import Hero from "./Hero";
+import  { Link } from 'react-router-dom'; // Import Link untuk navigasi
 
 // API KEY FROM THEMOVIEDB: 20c140e4adb91f55d3869a54318cf4b4
 // https://api.themoviedb.org/3/search/movie
 
 // MovieCard
-const MovieCard = ({ movie}) => {
+const MovieCard = ({ movie }) => {
     const posterURL = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`; // URL untuk poster film
+    const detailURL = `/movie/${movie.id}`; // URL untuk detail film berdasarkan ID
     return (
         <div className= "col-lg-3 col-md-3 col-2 my-3">
             <div className="card">
-                <img src={posterURL} class="card-img-top" alt="..." />
+                <img src={posterURL} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{movie.original_title}</h5>
-                    <a href="#" class="btn btn-primary">Show Details</a>
+                    <Link to={detailURL} className="btn btn-primary">Show Details</Link> {/* Menggunakan Link untuk navigasi ke detail film */}
                 </div>
             </div>
         </div>

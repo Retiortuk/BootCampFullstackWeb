@@ -29,6 +29,7 @@ const MovieView = () => {
         }
         // Jika loading sudah selesai, tampilkan detail film
         if (movieDetails) {
+            const posterURL = `https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`; // URL untuk poster film
             return (
                 <div>
                     <Hero text={movieDetails.original_title} /> {/* Menampilkan judul film sebagai teks Hero */}
@@ -37,7 +38,15 @@ const MovieView = () => {
                         <div className="row d-flex align-items-center justify-content-center">
                             <div className="col-lg-4 my-5">
                                 <div className="poster text-center text-lg-end">
-                                    <img src={`https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`} alt={movieDetails.original_title} className="img-fluid rounded" /> {/* Menampilkan poster film */}
+                                    {movieDetails.poster_path ? (
+                                        <img src={posterURL} alt={movieDetails.original_title} className="img-fluid shadow rounded" />
+                                        // Menampilkan poster film jika tersedia
+                                    ): (
+                                        <div className="d-flex align-items-center justify-content-center bg-light text-muted rounded"style={{ height: '500px', width: '100%' }}>
+                                            <p className="m-0 fw-bold">Image Not Available</p>
+                                        </div>
+                                        // Placeholder jika poster tidak tersedia
+                                    )}
                                 </div>
                             </div>
 

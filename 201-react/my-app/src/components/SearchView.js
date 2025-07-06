@@ -14,7 +14,7 @@ const MovieCard = ({ movie }) => {
                 <img src={posterURL} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{movie.original_title}</h5>
-                    <Link to={detailURL} className="btn btn-primary">Show Details</Link> {/* Menggunakan Link untuk navigasi ke detail film */}
+                    <Link to={detailURL} className="btn btn-dark">Show Details</Link> {/* Menggunakan Link untuk navigasi ke detail film */}
                 </div>
             </div>
         </div>

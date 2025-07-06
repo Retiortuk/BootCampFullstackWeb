@@ -15,7 +15,7 @@ const Navbar = ({ searchText, setSearchText }) => {
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
                 {/* Pakai Link Bukan <a> dan to="" bukan href="" */}
-                <Link className="navbar-brand" to="/">Navbar</Link>
+                <Link className="navbar-brand" to="/">Movie Browser</Link>
                 <button
                 className="navbar-toggler"
                 type="button"

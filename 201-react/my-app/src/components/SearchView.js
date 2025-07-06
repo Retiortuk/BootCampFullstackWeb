@@ -28,8 +28,11 @@ const SearchView = ({keyword, searchResults}) => { // Menerima props keyword dan
 
     const ResultsHTML = searchResults.map((obj, index) => { // Menggunakan map untuk mengiterasi setiap hasil pencarian
         // obj adalah setiap objek film dari hasil pencarian, index adalah indeksnya
+
         return (
-                <MovieCard movie={obj} key={index} /> 
+        
+                <MovieCard movie={obj} key={index} />  
+
         )
     }) 
 
@@ -40,7 +43,8 @@ const SearchView = ({keyword, searchResults}) => { // Menerima props keyword dan
             { ResultsHTML && 
                 <div className="container">
                     <div className="row">
-                        {ResultsHTML} {/* Menampilkan hasil pencarian */}
+                        {/* Menampilkan hasil pencarian */}
+                        {ResultsHTML } 
                     </div>
                 </div>
             }

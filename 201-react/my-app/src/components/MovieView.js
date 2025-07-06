@@ -22,17 +22,19 @@ const MovieView = () => {
             .catch(error => console.error("Error fetching movie details:", error));
     }, [id]); // Dependensi useEffect adalah id, sehingga akan dijalankan ulang jika id berubah
 
-    // Jika loading masih true, tampilkan pesan loading
     function renderMovieDetails() {
+        // Jika loading masih true, tampilkan pesan loading
         if (loading) {
             return <Hero text="Loading..." />; // Menampilkan teks loading
         }
         // Jika loading sudah selesai, tampilkan detail film
         if (movieDetails) {
             const posterURL = `https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`; // URL untuk poster film
+            const backdropURL = `https://image.tmdb.org/t/p/original/${movieDetails.backdrop_path}`; // URL untuk backdrop film
             return (
                 <div>
-                    <Hero text={movieDetails.original_title} /> {/* Menampilkan judul film sebagai teks Hero */}
+                    {/* TODO: ADD BACKDROP IN HERO */}
+                    <Hero text={movieDetails.original_title} backdrop={backdropURL} /> {/* Menampilkan judul film sebagai teks Hero */}
                     <div className="container">
 
                         <div className="row d-flex align-items-center justify-content-center">
@@ -61,8 +63,14 @@ const MovieView = () => {
                                             Original Language: {movieDetails.original_language}
                                         </p>
                                     </div>
-                                    <p>
-                                        <span className="fw-bold">Overview:</span> {movieDetails.overview} {/* Menampilkan overview film */}
+                                    <p> 
+                                        {movieDetails.overview ? (
+                                                <span className="lead">
+                                                    {movieDetails.overview}
+                                                </span>
+                                    ): (
+                                            <span className="fw-bold">Overview: Not Available</span> // Placeholder jika overview tidak tersedia
+                                    )}
                                     </p>
                                     <div className="d-flex gap-3 flex-column flex-lg-row py-5">
                                         <p className="fst-italic fw-bold">
